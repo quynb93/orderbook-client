@@ -4,7 +4,7 @@ class SocketIOService {
   socket: Socket;
 
   constructor() {
-    this.socket = io("ws://localhost:3000");
+    this.socket = io(process.env.NEXT_WS_URL!);
   }
 }
 
